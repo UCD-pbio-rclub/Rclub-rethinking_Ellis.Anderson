@@ -6,18 +6,29 @@ Name: __Ellis Anderson__
 
 ### 1
 
+![](/Assignment_2016_02_18/2M1_1.pdf)
+
 ### 2
 
+![](/Assignment_2016_02_18/2M1_2.pdf)
+
 ### 3
+
+![](/Assignment_2016_02_18/2M1_3.pdf)
 
 ## 2M2
 
 ### 1
 
+![](/Assignment_2016_02_18/2M2_1.pdf)
+
 ### 2
+
+![](/Assignment_2016_02_18/2M2_2.pdf)
 
 ### 3
 
+![](/Assignment_2016_02_18/2M2_3.pdf)
 
 ## 2M5
 
