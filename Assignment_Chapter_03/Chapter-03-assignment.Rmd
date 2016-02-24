@@ -1,24 +1,82 @@
 # Statistical Rethinking Chapter 3 problems
 
-__Name:__
+__Name__: Ellis Anderson
+
+## Homework Setup
+
+```{r, message=FALSE}
+library(rethinking)
+p_grid <- seq(from=0, to=1, length.out=1000)
+prior <- rep(1,1000)
+likelihood <- dbinom(6, size =9, prob = p_grid)
+posterior <- likelihood * prior
+posterior <- posterior/sum(posterior)
+set.seed(100)
+samples <- sample(p_grid, prob=posterior, size = 1e4, replace=TRUE)
+```
 
 ## 3E1
+  
+```{r}
+sum(samples < .2)/1e4
+```
 
 ## 3E2
 
+```{r}
+sum(samples > .8)/1e4
+```
+
 ## 3E3
+
+```{r}
+sum(samples < .8 & samples > .2)/1e4
+```
 
 ## 3E4
 
+```{r}
+quantile(samples, .2)
+```
+
 ## 3E5
+
+```{r}
+quantile(samples, .8)
+```
 
 ## 3E6
 
+```{r}
+HPDI(samples, prob = .66)
+```
+
 ## 3E7
+
+```{r}
+PI(samples, prob = .66)
+```
 
 ## 3M1
 
+```{r}
+p_grid <- seq(from=0, to=1, length.out=1000)
+prior <- rep(1,1000)
+likelihood <- dbinom(8, size = 15, prob = p_grid)
+posterior <- likelihood * prior
+posterior <- posterior/sum(posterior)
+```
+
+```{r, echo=FALSE} 
+plot(posterior, type="l")
+```
+
 ## 3M2
+
+```{r}
+samples <- sample(p_grid, prob=posterior, size = 1e4, replace = TRUE)
+HPDI(samples, prob=.9)
+```
 
 _STOP AFTER 3M2 FOR 02/25 ASSIGNMENT_
 
